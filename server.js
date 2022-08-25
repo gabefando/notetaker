@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 var notes = require('./db/db.json')
+const PORT = process.env.PORT || 3000
 
 // from miniproject
 app.use(express.json());
@@ -36,4 +37,4 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(3002)
+app.listen(PORT)
